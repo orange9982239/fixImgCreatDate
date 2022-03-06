@@ -43,10 +43,10 @@ if __name__ == '__main__':
     # 指定圖片資料夾
     folderPath = "C://Users//Admin//Desktop//photoFolder"
     # 取得檔案 list 並保留.jpg .heic 檔案
-    imgPathList = list(filter(lambda x: pathlib.PurePosixPath(x).suffix.lower() in ['.jpg','.heic'], os.listdir(folderPath)))
+    imgNameList = list(filter(lambda x: pathlib.PurePosixPath(x).suffix.lower() in ['.jpg','.heic'], os.listdir(folderPath)))
 
     # 迴圈傳入imgPath
-    for imgPath in imgPathList :
-        main(f'{folderPath}//{imgPath}')
+    for imgName in imgNameList :
+        main(f'{folderPath}//{imgName}')
 
     print('好囉~')
